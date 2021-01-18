@@ -5,25 +5,34 @@
 }
 .logo{
     background-color: chartreuse;
+    display: flex;
+        justify-content: space-between;
 }
 .logo h1{
-    float:left;
+    display: inline-flex;
+/*    float:left;*/
 }
 #headernav {
-    float:right;
-    
+/*    float:right;*/
+    display: flex;
+
 }
 #headernav li{
-    float:left;
+    display: inline-flex;
     padding:0 10px;
     list-style:none;
     border:medium solid #ff00ff;
 
 }
-header::after{
-    content:"";
-    display: block;
-    clear:both;
+.image-display{
+    border:solid 1px #aaaaaa;
+    padding:10px;
+}
+#work-hero-image{
+    width:100%;
+    height:20rem;
+    object-fit: cover;
+    border-radius: 20px;
 }
 #main{
     margin:20px 0;
