@@ -1,0 +1,45 @@
+.wrap {
+    margin: 0px 30px;
+    padding: 10px;
+    background: pink;
+}
+.logo{
+    background-color: chartreuse;
+}
+.logo h1{
+    float:left;
+}
+#headernav {
+    float:right;
+    
+}
+#headernav li{
+    float:left;
+    padding:0 10px;
+    list-style:none;
+    border:medium solid #ff00ff;
+
+}
+header::after{
+    content:"";
+    display: block;
+    clear:both;
+}
+#main{
+    margin:20px 0;
+}
+.registeredDate{
+    float:left;
+}
+.work-name{
+    float:right;
+}
+.work::after{
+    content:"";
+    display: block;
+    clear:both;
+}
+
+footer{
+    
+}
