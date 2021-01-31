@@ -1,5 +1,5 @@
 .wrap {
-    margin: 0px 30px;
+    margin: 70px 30px 0px;
     padding: 10px;
     background: pink;
 }
@@ -7,23 +7,41 @@
     background-color: chartreuse;
     display: flex;
         justify-content: space-between;
+    height: 70px;
 }
 .logo h1{
     display: inline-flex;
 /*    float:left;*/
 }
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right: 0;
+}
 #headernav {
 /*    float:right;*/
     display: flex;
+    margin-top:16px;
 
 }
 #headernav li{
     display: inline-flex;
     padding:0 10px;
     list-style:none;
-    border:medium solid #ff00ff;
+/*    border:medium solid #ff00ff;*/
 
 }
+#headernav li a{
+    color: whitesmoke;
+    
+}
+#headernav li a:hover{
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom:1px;
+    text-decoration:none;
+}
+
 .image-display{
     border:solid 1px #aaaaaa;
     padding:10px;
@@ -33,6 +51,25 @@
     height:20rem;
     object-fit: cover;
     border-radius: 20px;
+}
+#profileContains{
+    width:60%;
+    float: left;
+/*    display: inline-flex;*/
+}
+.wrap section{
+    margin-bottom: 50px;
+}
+#person-photo{
+    width:40%;
+/*    display: inline-flex;*/
+    float:right;
+}
+
+.profiles:after{
+    content:"";
+    display: block;
+    clear:both;
 }
 #main{
     margin:20px 0;
@@ -50,5 +87,51 @@
 }
 
 footer{
+    position:relative;
+    border-top: solid #000000;
+    text-align: center;
+    z-index:9;
+}
+#index{
+    background-image: url(../images/top_background01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
     
+}
+#index::before{
+    background-color: rgba(0,0,0,0.4);
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    content: '';
+    
+}
+#index header{
+
+    z-index: 10;
+}
+#index #wrap h1{
+    position:relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    color: whitesmoke;
+    margin:50px auto 200px;
+    z-index:9;
+}
+#index #wrap{
+    margin: 70px 50px 0px;
+    color: blanchedalmond;
+}
+#index footer{
+    position:relative;
+    border-top: solid #000000;
+    color: blanchedalmond;
+    text-align: center;
+    z-index:9;
+    padding-bottom: 20px;
 }

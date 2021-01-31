@@ -2,34 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <title>人物紹介</title>
 </head>
 <body>
-    <header>
+  <header>
         <div class="logo">
             <h1><a href ="index.html">氏名名前</a></h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="person.html">人物紹介</a></li>
-                <li><a href="works.html">作品集</a></li>
-                <li><a href="">趣味</a></li>
-            </ul>
-        </nav>
-        
-    </header>
+            <nav id="headernav">
+                <ul>
+                    <li><a href="person.html">人物紹介</a></li>
+                    <li><a href="works.html">作品集</a></li>
+                    <li><a href="">趣味</a></li>
+                </ul>
+            </nav>
+            </div>
+        </header>
+   <div class="wrap">
     <div>
-        <h1>ここではプロフィールが記載されています</h1>
+       <h2>About</h2>
+        <p>ここではプロフィールが記載されています</p>
     </div>
-    <div class="work">
-        <div class="registeredDate">
-            
+    <section class="profiles">
+         <div id="profileContains">
+            <h2>Profile</h2>
+            <div>氏名：氏名名前</div>
+            <div>年齢</div>
+            <div>趣味：手芸、ゲーム等</div>
+            <div>ダミーです。ダミーです。ダミーです。ダミーです。ダミーです。ダミーです。ダミーです。ダミーです。</div>
         </div>
-        <div>
-            <div class="work-title"></div>
+        <img id="person-photo" src="images/image_chara01.jpg" alt="写真">
+    </section>
+
+    <section class="careers">
+       <h2>Career and job history</h2>
+        <div class="oneCareer">
+          <div class="oneDate">
+              <div class="oneDateStart">0000年0月</div>
+              <div>~</div>
+              <div class="oneDateEnd">0000年0月</div>
+            </div>
+            <div class="careerContains">○○株式会社</div>
             <div class="explanation"></div>
         </div>
-    </div>
-    <footer></footer>
+      <div class="oneCareer">
+          <div class="oneDate">
+              <div class="oneDateStart">0000年0月</div>
+              <div>~</div>
+              <div class="oneDateEnd">0000年0月</div>
+            </div>
+            <div class="careerContains">株式会社○○</div>
+            <div class="explanation"></div>
+        </div>
+        <div>現在、プログラムを学習しながら就職活動中</div>
+      </section>
+          <footer>
+       <br>
+        <div>&copy;氏名名前さん</div>
+    </footer>
+   </div>
+       
 </body>
-</html>
+</html> 
