@@ -1,29 +1,41 @@
 .wrap {
-    margin: 70px 30px 0px;
-    padding: 10px;
-    background: pink;
+    margin: 100px 30px 0px;
+    padding: 10px 50px;
+    background: #82E700;
 }
+/*ヘッダー設定ここから*/
 .logo{
-    background-color: chartreuse;
+    background-color: #3A9923;
     display: flex;
-        justify-content: space-between;
-    height: 70px;
+    justify-content: space-between;/* 要素を両端に設置させる */
+    height: 100px;
+    
 }
 .logo h1{
     display: inline-flex;
+    font-size:5vw;
+    white-space: nowrap;
+    margin: auto;
+    color: whitesmoke;
 /*    float:left;*/
 }
+
+.logo a {
+    color: inherit;
+}
+
 header{
     position:fixed;
     top:0;
     left:0;
     right: 0;
+    z-index:10;
 }
 #headernav {
 /*    float:right;*/
     display: flex;
     margin-top:16px;
-
+    font-size:2vw;
 }
 #headernav li{
     display: inline-flex;
@@ -41,10 +53,11 @@ header{
     padding-bottom:1px;
     text-decoration:none;
 }
-
+/*ヘッダー設定ここまで*/
 .image-display{
-    border:solid 1px #aaaaaa;
+/*    border:solid 1px #aaaaaa;*/
     padding:10px;
+    margin-bottom:20px;
 }
 #work-hero-image{
     width:100%;
@@ -52,20 +65,67 @@ header{
     object-fit: cover;
     border-radius: 20px;
 }
+.work table{
+    width:80%;
+    margin:20px 0;
+}
+.work th{
+    background-color: #F8E800;
+    padding: 15px;
+    border:solid 1px darkgray;
+    width:40%;
+}
+.work-name{
+    width:20%;
+}
+.explanation{
+    width:40%;
+}
+.work td{
+    padding: 15px;
+    
+    border:solid 1px darkgray;
+}
 #profileContains{
-    width:60%;
+    width:55%;
+    padding:15px;
     float: left;
+    border:1px solid darkgray;
 /*    display: inline-flex;*/
+}
+#profileContains dd{
+    font-size: 0.9em;
+/*  文字の大きさを標準から0.9倍の大きさに指定(標準を１として指定)  */
+    text-indent:1em;
+/*  一文字インデントを下げる  */
+}
+#carouselExampleIndicators{
+    float:right;
+    width: 40%;
+    z-index:9;
+}
+.person-photo{
+    height: 20vw;
+    object-fit: cover;
+
 }
 .wrap section{
     margin-bottom: 50px;
 }
-#person-photo{
-    width:40%;
-/*    display: inline-flex;*/
-    float:right;
+.careers-table{
+    width:80%;
+    margin:20px 0;
 }
-
+.careers-table th{
+    background-color: #F8E800;
+    padding: 15px;
+    border:solid 1px darkgray;
+    width:40%;
+}
+.careers-table td{
+    padding: 15px;
+    border:solid 1px darkgray;
+}
 .profiles:after{
     content:"";
     display: block;
@@ -74,12 +134,14 @@ header{
 #main{
     margin:20px 0;
 }
+/*
 .registeredDate{
     float:left;
 }
 .work-name{
     float:right;
 }
+*/
 .work::after{
     content:"";
     display: block;
@@ -98,7 +160,7 @@ footer{
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    position: relative;
+/*    position: relative;*/
     
 }
 #index::before{
@@ -115,15 +177,19 @@ footer{
 
     z-index: 10;
 }
-#index #wrap h1{
+.hamburger-menu{
+    visibility:hidden;
+}
+#index #main h1{
     position:relative;
     font-family: 'Poppins', sans-serif;
-    font-size: 100px;
+    font-size: 10vw;
     color: whitesmoke;
-    margin:50px auto 200px;
+    margin:110px auto 110px;
     z-index:9;
 }
-#index #wrap{
+
+#index #main{
     margin: 70px 50px 0px;
     color: blanchedalmond;
 }
@@ -133,5 +199,57 @@ footer{
     color: blanchedalmond;
     text-align: center;
     z-index:9;
-    padding-bottom: 20px;
+/*    padding-bottom: 20px;*/
+}
+/*レイアウト番号優先順位設定*/
+.layerTen{
+    z-index:10;
+}
+.layerNin{
+    z-index:9;
+}
+@media screen and (max-width:800px){
+/*  画面サイズが600px以下の場合に適用  */
+    body{
+        font-size:3.5vw;
+    }
+    .logo{
+        height: 10.2vw;
+        display: block;
+}
+    .logo h1{
+        font-size: 5vw;
+    }
+    #index{
+    position: static;
+    
+}
+    #headernav{
+        visibility:hidden;
+    }
+    .hamburger-menu{
+    visibility:visible;
+}
+    #index #main h1{
+    font-size: 14vw;
+}
+    #work-hero-image{
+        height:10rem;
+    }
+    #profileContains{
+    width:100%;
+    border:1px solid ;
+}
+    #carouselExampleIndicators{
+       width:100%; 
+    }
+    
+    #profileContains dd{
+        font-size: 3vw;
+    }
+    .person-photo{
+        width:100%;
+        clear:both;
+    }
+    
 }
