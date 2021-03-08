@@ -201,6 +201,22 @@ footer{
     z-index:9;
 /*    padding-bottom: 20px;*/
 }
+.grid_first li{
+    float: left;
+    list-style:none;
+    margin:0 20px 15px 0;
+}
+
+.grid_first ul:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+#page1 .grid_first .sidemenu
+{
+    
+}
+
 /*レイアウト番号優先順位設定*/
 .layerTen{
     z-index:10;
@@ -227,9 +243,64 @@ footer{
     #headernav{
         visibility:hidden;
     }
-    .hamburger-menu{
-    visibility:visible;
+    .menu-btn {
+        position:fixed;
+        display: flex;
+        justify-content: center;
+    align-items: center;
+        top:1vw;
+        right:1vw;
+        height: 5vw;
+        width:5vw;
+        
+    }
+    .menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    transition: .5s;
 }
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+    .close-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+.close-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+.close-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+    .hamburger-menu{
+        visibility:visible;
+        background-color:#3A9923;
+        color:whitesmoke;
+        text-align: end;
+        padding-right: 10px;
+        height: 0;
+        overflow-y: hidden;
+        transition: .5s;
+}
+    .hamburger-menu div:hover{
+        background-color:chartreuse;
+    }
+    .open-menu{
+        height: 20vw;
+    }
+    
+    
     #index #main h1{
     font-size: 14vw;
 }
